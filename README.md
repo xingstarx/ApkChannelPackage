@@ -10,3 +10,6 @@ ApkChannelPackage是一种快速多渠道打包工具，同时支持基于V1签�
 ## 最新版本
 目前已更新到1.0.2版本
 
+
+## 本地maven测试
+修改maven url 为 `url uri('/Users/xingxing/localMaven')` 然后执行 `./gradlew install --info` 就可以在mac本地生成maven仓库
