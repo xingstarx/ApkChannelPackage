@@ -44,7 +44,7 @@ install {
     }
 
     repositories.mavenDeployer {
-        repository(url: "file:///Users/zhangkaqi/localMaven")
+        repository(url: uri('/Users/xingxing/localMaven'))
     }
 }
 
@@ -99,24 +99,24 @@ install {
 //}
 
 //解析用户名和密码，上传到jcenter
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-bintray { //BintrayExtension
-    user = properties.getProperty("bintray.user")
-    key = properties.getProperty("bintray.apikey")
-    configurations = ['archives']
-    pkg { //PackageConfig
-        repo = "maven"  //publish to maven warehouse
-        //userOrg "litao"
-        name = "${GROUP}:${POM_ARTIFACT_ID}"
-        licenses = BINTRAY_LICENCE
-        vcsUrl = POM_SCM_URL
-        websiteUrl = POM_URL
-        issueTrackerUrl = POM_ISSUE_URL
-        publicDownloadNumbers = true
-        publish = true
-        dryRun = false
-    }
-}
+//Properties properties = new Properties()
+//properties.load(project.rootProject.file('local.properties').newDataInputStream())
+//bintray { //BintrayExtension
+//    user = properties.getProperty("bintray.user")
+//    key = properties.getProperty("bintray.apikey")
+//    configurations = ['archives']
+//    pkg { //PackageConfig
+//        repo = "maven"  //publish to maven warehouse
+//        //userOrg "litao"
+//        name = "${GROUP}:${POM_ARTIFACT_ID}"
+//        licenses = BINTRAY_LICENCE
+//        vcsUrl = POM_SCM_URL
+//        websiteUrl = POM_URL
+//        issueTrackerUrl = POM_ISSUE_URL
+//        publicDownloadNumbers = true
+//        publish = true
+//        dryRun = false
+//    }
+//}
 
 
